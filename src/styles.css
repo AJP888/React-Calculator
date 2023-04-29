@@ -1,0 +1,103 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Effects the overal code in React*/
+
+body {
+  margin: 0;
+  background: linear-gradient(to right, #00aaff, #00ff6c);
+}
+
+/* The body effects the overal body of styling with 0 margin and a background coloring og ti rgiht and then  blue into green*/
+
+.calculator-grid {
+  display: grid;
+  margin-top: 2rem;
+  justify-content: center;
+  grid-template-columns: repeat(4, 6rem);
+  grid-template-rows: minmax(7rem, auto) repeat(5, 6rem);
+}
+
+/* 
+calculator grid creates a grid design that uses display: grid a margin top with 2 rem justify content: center which centers the page
+a grid-template-columns: repeat(4, 6rem) we are vreating 4 grid references with 6rem sizing
+we then create a grid-template-rows: minmax(7rem, auto)  we start with 7rem then auto fills 
+we then repaet(5, with 6rem) // means we create five rows down with 6 rem spacing
+
+
+*/
+
+.calculator-grid > button {
+  cursor: pointer;
+  font-size: 2rem;
+  border: 1px solid white;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
+/*
+we a re targetign the buttons inside the calculator grid: calculator > button
+we are settign the cursosr to a pointer
+we create a fontsize of 2rem
+we create a border for each button 1px with a solid background and a white coloring 
+we have no outline
+and a whitebackground color when wer go onto the button with our cursor
+
+*/
+
+.calculator-grid > button:hover,
+.calculator-grid > button:focus {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+/* Again we are targeting the button inside the calcualtor then using a hover and a focus and setting the background color to white when we hover over them and click*/
+
+.span-two {
+  grid-column: span 2;
+}
+
+/* for span-two we are creatign a grid-column that has a span of two meaning that each button is twice the size*/
+
+.output {
+  grid-column: 1 / -1;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+  padding: 0.75rem;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+/* 
+The output fills out the output form that has a grid-column 1/-1 keeps the screen blank
+
+a ackground color of black but 0.75 makes it partially visable
+
+display: flex / writing goes across the screen.
+
+we use flexdirections: column
+
+
+
+
+
+*/
+
+.output .previous-operand {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 1.5rem;
+}
+
+/* Styling for previous-operaand the font sie and coloring for the background numbers*/
+
+.output .current-operand {
+  color: white;
+  font-size: 2.5rem;
+}
+
+/* We are styling the main numbers with a white color and a 2.5rem sizing*/
